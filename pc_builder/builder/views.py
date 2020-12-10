@@ -1,9 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def home(request):
-	return HttpResponse('<h1>Build a PC!</h1>')
 
-def about(request):
-	return HttpResponse('<h1>About us</h1>')
+builds = [
+	{
+		'title':'build name here',
+		'gpu':'RTX 3080',
+		'cpu': 'Ryzen 9 3700x',		
+	}
+]
+
+
+def home(request):
+	context = {
+		'builds': builds
+	}
+	return render(request, 'builder/home.html',context)
+
+def login(request):
+	return render(request, 'builder/login.html')
 # Create your views here.

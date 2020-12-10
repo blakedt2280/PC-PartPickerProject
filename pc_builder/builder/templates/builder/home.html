@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Build a pc</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "builder/base.html" %}
+{% block content %}
+	{% for build in builds %}
+		<h1>{{ build.title }}</h1>
+		<p>{{ build.gpu }}</p>
+		<p>{{ build.cpu }}</p>
+	{% endfor %}
+{% endblock content %}

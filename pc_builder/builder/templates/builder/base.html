@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if title%}
+		<title>PC Builder - {{title}}</title>
+	{% else %}
+		<title>PC Builder - {{title}}</title>
+	{% endif %}	
+</head>
+<body>
+	{% block content %}{% endblock %}
+</body>
+</html>
